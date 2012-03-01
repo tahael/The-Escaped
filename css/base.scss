@@ -1,0 +1,304 @@
+/* The Escaped */
+
+$color0: rgb(0,111,153); /* Blue */
+$color1: rgb(77,77,83); /* Grey */
+$color2: rgb(200,200,200); /*Light Grey */
+$black: rgb(0,0,0);
+$white: rgb(255,255,255);
+$total-width: 960px;
+$content-width: 600px;
+$border: 1px;
+$topics-height: 30px;
+$search-height: 50px;
+$categories: 5;
+$number-of-columns: 3;
+$main-font: Droid Sans;
+$font-for-the-rest: helvetica;
+$page-height: 700px;
+$content-margin: 20px;
+$search_button: 100px;
+@mixin social($x, $y){
+    background: url(../images/gui.png) $x $y no-repeat;
+};
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body{
+    height: 100%;
+    text-align: center;
+    font-family: $main-font, $font-for-the-rest;
+    margin-top: 0;
+}
+
+#container{
+    width: $total-width;
+    height: $page-height;
+    position: relative;
+    margin: auto;
+}
+
+#menu{
+    width: ($total-width - $content-width)/2;
+    height: $page-height;
+    float: left;
+    display: inline-block;
+    ul{
+        margin: 90px 0 0 0;
+        padding: 0;
+        li{
+            color: $color1;
+            list-style: none;
+            font: {
+                size: 20px;
+            }
+        }
+        #about, #contact{
+            cursor: pointer;
+        }
+        .summary{
+            height:25px;
+            overflow: hidden;
+        }
+        .full_view{
+            height:100%;
+            margin: 0 10px 10px 10px;
+        }
+        .summary, .full_view{
+            .menu_text{
+                    font-size: 14px;
+                    text-align: justify;
+                    margin: 0;
+                    padding: 0;
+            }
+        }
+    }
+        #logo{
+            height: 38px;
+            width: 175px;
+            background-image: url(../images/logo.png);
+        }
+}
+
+#content{
+    width: $content-width - 2*$border;
+    height: $page-height;
+    display: inline-block;
+    float: left;
+    border: $border solid $color2;
+    #topicsmenu{
+        background-color: $color0;
+        width: $content-width - 2*$border;
+        .current{
+            font-weight: bold;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            height: $topics-height;
+            li{
+                a:link,a:active,a:visited{
+                    text-decoration:none;
+                    color: $white;
+                    font: {
+                        size: 15px;
+                    }
+                }
+                margin-top: 5px;
+                float: left;
+                list-style: none;
+                width: ($content-width - ($border*2))/$categories;
+                text-align: center;
+            }
+        }
+    }
+    #search{
+        .text{
+        height: $search-height;
+        margin-top: $content-margin;
+        border: 1px solid $color2;
+        height: 20px;
+        margin-bottom: $content-margin;
+        width: $content-width -($border * 4) - $search_button;
+        color: $color1
+        }
+        .button{
+            width: $search_button;
+            height: 24px;
+            color: $color1;
+            background-color: $color2;
+            border: 1px solid $color2;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: $color1;
+            color: $white;
+        }
+    }
+ 
+    
+    #articles_container{
+        .thumb .end,
+        .thumb { background-color: $color0; }
+        .scrollbar { position: relative; float: right; width: 15px; }
+        .track { background-color: $color2; height: 600px; width:13px; position: relative; padding: 0 1px; }
+        .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+        .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+        .disable{ display: none; }
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: $page-height - $topics-height - $search-height - $content-margin;
+        list-style: none;
+        border-top: 1px solid $color2;
+        margin: 0;
+        padding: 0;
+        .article_wrapper{
+            margin-bottom: $content-margin;
+            border-top: 1px solid $color2;
+            border-bottom: 1px solid $color2;
+            text-align: left;
+            padding: 10px;
+            .social_links{
+                float: right;
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        float:left;
+                        list-style: none;
+                        height: 20px;
+                        width: 20px;
+                    }
+                    .facebook{
+                        @include social(0,0);
+                    }
+                    .facebook:hover{
+                        @include social(0,-19px);
+                    }
+                    .twitter{
+                        @include social(-21px,0);
+                    }
+                    .twitter:hover{
+                        @include social(-21px,-19px);
+                    }
+                    .linkedin{
+                        @include social(-44px,0);
+                    }
+                    .linkedin:hover{
+                        @include social(-44px,-19px);
+                    }
+                    .stumbleupon{
+                        @include social(-66px,0);
+                    }
+                    .stumbleupon:hover{
+                        @include social(-66px,-19px);
+                    }
+                    .digg{
+                        @include social (-88px,0);
+                    }
+                    .digg:hover{
+                        @include social (-88px,-19px);
+                    }
+                }
+            }
+            .article_title{
+                color: $color0;
+                text-transform: uppercase;
+                display: block;
+                margin: 20px 0 0 0;
+                font:{
+                    size: 25px;
+                    weight: bold;
+                }
+                
+            }
+            #authors{
+                a:link,a:active,a:visited{
+                    text-decoration:none;
+                    color: $color1;
+                    font: {
+                        size: 15px;
+                    }
+                }
+                a:hover{
+                        color: $black;
+                        cursor: pointer;
+                }
+                img{
+                    height: 40px;
+                    width: 40px;
+                    margin-right: 10px;
+                    float: left;
+                }
+                font:{
+                    size: 12px;
+                }
+            }
+        }
+        .summary{
+            width: $content-width -5px;
+            height:250px;
+            overflow: hidden;
+            padding-right: 5px;
+            text-align: justify;
+            line-height: 18px;
+            font:{
+                size: 14px;
+            }
+        }
+        .full_view{
+            height:100%;
+            width: $content-width -5px;
+            padding-right: 5px;
+            text-align: justify;
+            line-height: 18px;
+            font:{
+                size: 14px;
+            }
+        }
+        .button{
+            height: 20px;
+            background: url('../images/expand.jpg') no-repeat center;
+            cursor: pointer;
+        }
+        .collapse{
+            background: url('../images/collapse.jpg') no-repeat center;
+        }
+        #load_more{
+            width: $content-width;
+            padding: 5px;
+            text-align: center;
+            color: $white;
+            background-color: $color0;
+            border: 1px solid $color2;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+#ads{
+    width: ($total-width - $content-width)/2;
+    height: $page-height;
+    float: right;
+    display: inline-block;
+    text-align: center;
+    img{
+        height: 125px;
+        width: 125px;
+        margin: 10px;
+        border: 1px solid $color2;
+    }
+    ul{
+        margin: 90px 0 0 15px;
+        padding: 0;
+        position: relative;
+        li{
+            width: 145px;
+            color: $color1;
+            list-style: none;
+            font: {
+                size: 12px;
+            }
+        }
+    }
+}
