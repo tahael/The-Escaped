@@ -6,17 +6,15 @@ $color2: rgb(200,200,200); /*Light Grey */
 $black: rgb(0,0,0);
 $white: rgb(255,255,255);
 $total-width: 960px;
-$content-width: 600px;
+$content-width: 780px;
 $border: 1px;
-$topics-height: 30px;
+$topics-height: 38px;
 $search-height: 50px;
-$categories: 5;
-$number-of-columns: 3;
+$categories: 7;
 $main-font: Droid Sans;
 $font-for-the-rest: helvetica;
-$page-height: 700px;
-$content-margin: 20px;
-$search_button: 100px;
+$page-height: 100%;
+$content-margin: 15px;
 @mixin social($x, $y){
     background: url(../images/gui.png) $x $y no-repeat;
 };
@@ -38,12 +36,12 @@ body{
 }
 
 #menu{
-    width: ($total-width - $content-width)/2;
+    width: $total-width - $content-width;
     height: $page-height;
     float: left;
     display: inline-block;
     ul{
-        margin: 90px 0 0 0;
+        margin: 50px 0 0 0;
         padding: 0;
         li{
             color: $color1;
@@ -72,89 +70,75 @@ body{
             }
         }
     }
-        #logo{
-            height: 38px;
-            width: 175px;
-            background-image: url(../images/logo.png);
-        }
 }
 
-#content{
-    width: $content-width - 2*$border;
-    height: $page-height;
-    display: inline-block;
-    float: left;
-    border: $border solid $color2;
-    #topicsmenu{
-        background-color: $color0;
-        width: $content-width - 2*$border;
-        .current{
-            font-weight: bold;
-        }
-        ul{
-            margin: 0;
-            padding: 0;
-            height: $topics-height;
-            li{
-                a:link,a:active,a:visited{
-                    text-decoration:none;
-                    color: $white;
-                    font: {
-                        size: 15px;
-                    }
+#topicsmenu{
+    width: $total-width;
+    position: fixed;
+    top: 0;
+    background-color: $color0;
+    filter:alpha(opacity=90);
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+    z-index:99;
+    .current{
+        font-weight: bold;
+    }
+    ul{    
+        margin: 0 0 0 180px;
+        padding: 0;
+        li{
+            a:link,a:active,a:visited{
+                text-decoration:none;
+                color: $white;
+                font: {
+                    size: 15px;
                 }
-                margin-top: 5px;
-                float: left;
-                list-style: none;
-                width: ($content-width - ($border*2))/$categories;
-                text-align: center;
-            }
+            }         
+            height: $topics-height - 9px;
+            padding: 9px 15px 0 15px;
+            float: left;
+            list-style: none;
+            text-align: center;
         }
+    }
+    #logo{
+        height: 38px;
+        width: 180px;
+        background-image: url(../images/logo.png);
+        float: left;
+        z-index: 100;
     }
     #search{
+        width: ($content-width/$categories)*2;
+        float: right;
+        padding-top: 6px;
         .text{
-        height: $search-height;
-        margin-top: $content-margin;
-        border: 1px solid $color2;
-        height: 20px;
-        margin-bottom: $content-margin;
-        width: $content-width -($border * 4) - $search_button;
-        color: $color1
-        }
-        .button{
-            width: $search_button;
             height: 24px;
-            color: $color1;
-            background-color: $color2;
+            width: 150px;
             border: 1px solid $color2;
-            cursor: pointer;
-        }
-        .button:hover{
-            background-color: $color1;
-            color: $white;
+            color: $color1;
+            padding: 0;
+            float: right;
         }
     }
- 
-    
-    #articles_container{
-        .thumb .end,
-        .thumb { background-color: $color0; }
-        .scrollbar { position: relative; float: right; width: 15px; }
-        .track { background-color: $color2; height: 600px; width:13px; position: relative; padding: 0 1px; }
-        .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
-        .thumb .end { overflow: hidden; height: 5px; width: 13px; }
-        .disable{ display: none; }
-        overflow-y: scroll;
+}
+
+#articles_container{
+        width: $content-width - 2*$border;
+        display: inline-block;
+        float: left;
+        overflow-y: hidden;
         overflow-x: hidden;
-        height: $page-height - $topics-height - $search-height - $content-margin;
+        height: $page-height;
         list-style: none;
-        border-top: 1px solid $color2;
-        margin: 0;
+        border-top: 2px solid $color2;
+        margin-top: $topics-height;
         padding: 0;
         .article_wrapper{
             margin-bottom: $content-margin;
             border-top: 1px solid $color2;
-            border-bottom: 1px solid $color2;
             text-align: left;
             padding: 10px;
             .social_links{
@@ -233,6 +217,23 @@ body{
                     size: 12px;
                 }
             }
+            #ad_authors{
+                @extend #authors
+            }
+            .ad{
+                color: $color0;
+                font:{
+                    size: 20px;
+                }
+                margin: 20px 0 0 0;
+                a:link,a:active,a:visited{
+                    text-decoration: underline;
+                    color: $color0;
+                    font: {
+                        size: 20px;
+                    }
+                }
+            }
         }
         .summary{
             width: $content-width -5px;
@@ -259,6 +260,7 @@ body{
             height: 20px;
             background: url('../images/expand.jpg') no-repeat center;
             cursor: pointer;
+            padding-top: 10px;
         }
         .collapse{
             background: url('../images/collapse.jpg') no-repeat center;
@@ -273,32 +275,4 @@ body{
             margin-top: 10px;
             cursor: pointer;
         }
-    }
-}
-
-#ads{
-    width: ($total-width - $content-width)/2;
-    height: $page-height;
-    float: right;
-    display: inline-block;
-    text-align: center;
-    img{
-        height: 125px;
-        width: 125px;
-        margin: 10px;
-        border: 1px solid $color2;
-    }
-    ul{
-        margin: 90px 0 0 15px;
-        padding: 0;
-        position: relative;
-        li{
-            width: 145px;
-            color: $color1;
-            list-style: none;
-            font: {
-                size: 12px;
-            }
-        }
-    }
 }
