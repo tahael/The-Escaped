@@ -34,7 +34,8 @@ body {
       overflow: hidden; }
     #menu ul .full_view {
       height: 100%;
-      margin: 0 10px 10px 10px; }
+      margin: 0 10px 10px 10px;
+      overflow: hidden; }
     #menu ul .summary .menu_text, #menu ul .full_view .menu_text {
       font-size: 14px;
       text-align: justify;
@@ -73,7 +74,7 @@ body {
     float: left;
     z-index: 100; }
   #topicsmenu #search {
-    width: 222.857px;
+    width: 160px;
     float: right;
     padding-top: 6px; }
     #topicsmenu #search .text {
@@ -95,41 +96,71 @@ body {
   border-top: 2px solid #c8c8c8;
   margin-top: 38px;
   padding: 0; }
+  #articles_container #anchor {
+    position: absolute;
+    margin-top: -30px; }
   #articles_container .article_wrapper {
     margin-bottom: 15px;
     border-top: 1px solid #c8c8c8;
     text-align: left;
     padding: 10px; }
     #articles_container .article_wrapper .social_links {
-      float: right; }
-      #articles_container .article_wrapper .social_links ul {
-        margin: 0;
-        padding: 0; }
-        #articles_container .article_wrapper .social_links ul li {
-          float: left;
-          list-style: none;
-          height: 20px;
-          width: 20px; }
-        #articles_container .article_wrapper .social_links ul .facebook {
-          background: url(../images/gui.png) 0 0 no-repeat; }
-        #articles_container .article_wrapper .social_links ul .facebook:hover {
-          background: url(../images/gui.png) 0 -19px no-repeat; }
-        #articles_container .article_wrapper .social_links ul .twitter {
-          background: url(../images/gui.png) -21px 0 no-repeat; }
-        #articles_container .article_wrapper .social_links ul .twitter:hover {
-          background: url(../images/gui.png) -21px -19px no-repeat; }
-        #articles_container .article_wrapper .social_links ul .linkedin {
-          background: url(../images/gui.png) -44px 0 no-repeat; }
-        #articles_container .article_wrapper .social_links ul .linkedin:hover {
-          background: url(../images/gui.png) -44px -19px no-repeat; }
-        #articles_container .article_wrapper .social_links ul .stumbleupon {
-          background: url(../images/gui.png) -66px 0 no-repeat; }
-        #articles_container .article_wrapper .social_links ul .stumbleupon:hover {
-          background: url(../images/gui.png) -66px -19px no-repeat; }
-        #articles_container .article_wrapper .social_links ul .digg {
-          background: url(../images/gui.png) -88px 0 no-repeat; }
-        #articles_container .article_wrapper .social_links ul .digg:hover {
-          background: url(../images/gui.png) -88px -19px no-repeat; }
+      float: right;
+      margin: 0;
+      padding: 0;
+      float: right;
+      list-style: none;
+      height: 20px; }
+      #articles_container .article_wrapper .social_links .facebook {
+        background: url(../images/gui.png) 0 0 no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .facebook:hover {
+        background: url(../images/gui.png) 0 -19px no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .twitter {
+        background: url(../images/gui.png) -21px 0 no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .twitter:hover {
+        background: url(../images/gui.png) -21px -19px no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .linkedin {
+        background: url(../images/gui.png) -44px 0 no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .linkedin:hover {
+        background: url(../images/gui.png) -44px -19px no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .stumbleupon {
+        background: url(../images/gui.png) -66px 0 no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .stumbleupon:hover {
+        background: url(../images/gui.png) -66px -19px no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .digg {
+        background: url(../images/gui.png) -88px 0 no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
+      #articles_container .article_wrapper .social_links .digg:hover {
+        background: url(../images/gui.png) -88px -19px no-repeat;
+        height: 20px;
+        width: 20px;
+        float: left; }
     #articles_container .article_wrapper .article_title {
       color: #006f99;
       text-transform: uppercase;
@@ -173,7 +204,8 @@ body {
     padding-right: 5px;
     text-align: justify;
     line-height: 18px;
-    font-size: 14px; }
+    font-size: 14px;
+    overflow: hidden; }
   #articles_container .button {
     height: 20px;
     background: url("../images/expand.jpg") no-repeat center;

@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-<html>
     <head>
         <meta http-equiv="content-type" content="text/html" /> 
 	<meta name="Author" content="D Escaped" />
@@ -11,18 +10,19 @@
     </head>
 <body>
     <div id="container">
-	<!--This is the left menu-->
+	<!--Left menu-->
 	<div id="menu">
 	    <ul>
-		<li id="about" class="summary" onclick="expand('about')">About us<br/><p class="menu_text">No one dies from lack of food but many die from lack of ideas. We fish for those everywhere, plagiarize them and present them in crisp language.</p></li>
-		<li id="contact" class="summary" onclick="expand('contact')">Contact us<br/><p class="menu_text">contact@descaped.com</p></li>
+		<li id="about" class="summary" onclick="expand('about',' ')">About us<br/><p class="menu_text">No one dies from lack of food but many die from lack of ideas. We fish for those everywhere, plagiarize them and present them in crisp language.</p></li>
+		<li id="contact" class="summary" onclick="expand('contact',' ')">Contact us<br/><p class="menu_text">contact@descaped.com</p></li>
 	    </ul>
 	</div>
 	
+	<!--Tags menu-->
 	<div id="topicsmenu">
 	    <div id="logo"></div>
 	    <ul id="filter">
-		<li class="current"><a href="#">All</a></li>
+		<li class="current"><a href="#" onclick="collapse_all()">All</a></li>
 		<li><a href="#">Entrepreneurship</a></li>
 		<li><a href="#">Politics</a></li>
 		<li><a href="#">Technology</a></li>
@@ -30,19 +30,17 @@
 		<li id="search"><input type="text" class="text" value="Search"></li>
 	    </ul>
 	</div>
-	<!--This is the container of the articles and the topics menu-->
-
+	
+	<!--This is the container of the articles-->
 	<ul id="articles_container">
+	    <a id="anchor" name="the audacity of deceit">&nbsp</a>
 	    <li class="article_wrapper politics zouhair">
-		<a name="the audacity of deceit"></a>
 		<div class="social_links">
-		    <ul>
-		    <li class="facebook"></li>
-		    <li class="twitter"></li>
-		    <li class="linkedin"></li>
-		    <li class="stumbleupon"></li>
-		    <li class="digg"></li>
-		    </ul>
+		    <div class="facebook"></div>
+		    <div class="twitter"></div>
+		    <div class="linkedin"></div>
+		    <div class="stumbleupon"></div>
+		    <div class="digg"></div>
 		</div>
 		<div id="authors">
 		    <img src="images/zouhair.jpg"/><div><a href="#">Zouhair</a><br/>1 min ago</div>
@@ -57,19 +55,17 @@
 		    <p>Moroccans love their King. They love their religion. They also love their food, their weddings and their traditions. So many cultural symbols that make this country unique. And it is because they are distinctive that cultural and sovereign symbols should not be used in political debate. Regardless of the future improvements that the new Constitution may bring, I think we have missed out on a priceless opportunity to initiate ourselves to civic debate. I hope that next time they go to the ballots, most Moroccans will know what they are voting for. Otherwise, Churchill would have been right when saying: "The best argument against Democracy is a five minute conversation with the average voter." </p>
 		<div class="fb-comments" data-href="http://www.ibest.ma/descaped/index.html#the audacity of deceit" data-num-posts="15" data-width="500"></div>
 		</div>
-		<div id="button_article1" class="button" onclick="expand('article1')"></div>
+		<div id="button_article1" class="button" onclick="expand('article1','the audacity of deceit')"></div>
 	    </li>
 	    
+	    <a id="anchor" name="the way to a peaceful reconquest of palestine">&nbsp</a>
 	    <li class="article_wrapper politics taha">
-		<a name="the way to a peaceful reconquest of palestine"></a>
 		<div class="social_links">
-		    <ul>
-		    <li class="facebook"></li>
-		    <li class="twitter"></li>
-		    <li class="linkedin"></li>
-		    <li class="stumbleupon"></li>
-		    <li class="digg"></li>
-		    </ul>
+		    <div class="facebook"></div>
+		    <div class="twitter"></div>
+		    <div class="linkedin"></div>
+		    <div class="stumbleupon"></div>
+		    <div class="digg"></div>
 		</div>
 		<div id="authors">
 		    <img src="images/taha.jpg"/><div><a href="#">Taha</a><br/>5 min ago</div>
@@ -81,18 +77,16 @@
 		    <p> It would be naïve to assume that the road towards such a state would be rosy but there are bumps on the road to the creation of any great nation.</p>
 		<div class="fb-comments" data-href="http://www.ibest.ma/descaped/index.html#the way to a peaceful reconquest of palestine" data-num-posts="15" data-width="500"></div>
 		</div>
-		<div id="button_article2" class="button" onclick="expand('article2')"></div>
+		<div id="button_article2" class="button" onclick="expand('article2','the way to a peaceful reconquest of palestine')"></div>
 	    </li>
 	    
 	    <li class="article_wrapper">
 		<div class="social_links">
-		    <ul>
-		    <li class="facebook"></li>
-		    <li class="twitter"></li>
-		    <li class="linkedin"></li>
-		    <li class="stumbleupon"></li>
-		    <li class="digg"></li>
-		    </ul>
+		    <div class="facebook"></div>
+		    <div class="twitter"></div>
+		    <div class="linkedin"></div>
+		    <div class="stumbleupon"></div>
+		    <div class="digg"></div>
 		</div>
 		<div id="ad_authors">
 		    <img src="images/ads/ibest.jpg"/><div><a href="http://www.ibest.ma" target="_blank">iBest</a><br/>Advertisement</div>
@@ -102,16 +96,14 @@
 		</div>
 	    </li>
 	    
+	    <a id="anchor" name="why i almost voted for the islamists">&nbsp</a>
 	    <li class="article_wrapper politics zouhair">
-		<a name="why i almost voted for the islamists"></a>
 		<div class="social_links">
-		    <ul>
-		    <li class="facebook"></li>
-		    <li class="twitter"></li>
-		    <li class="linkedin"></li>
-		    <li class="stumbleupon"></li>
-		    <li class="digg"></li>
-		    </ul>
+		    <div class="facebook"></div>
+		    <div class="twitter"></div>
+		    <div class="linkedin"></div>
+		    <div class="stumbleupon"></div>
+		    <div class="digg"></div>
 		</div>
 		<div id="authors">
 		    <img src="images/zouhair.jpg"/><div><a href="#">Zouhair</a><br/>35 min ago</div>
@@ -137,19 +129,17 @@
 		    <p>The most successful political movements have always been the ones able to capture and absorb popular outcry, then translate it in institutions through legislation. Ask Ghandi. Ask Clinton. Ask Erdugan. Ask Obama (you all saw that one coming, didn’t you?). Ask Hania in Palestine. The Justice and Development Party has fulfilled the first criterion of a successful political movement. And while it strives to fulfil the second, it does deserve respect and consideration.</p>
 		<div class="fb-comments" data-href="http://www.ibest.ma/descaped/index.html#why i almost voted for the islamists" data-num-posts="15" data-width="500"></div>
 		</div>
-		<div id="button_article3" class="button" onclick="expand('article3')"></div>
+		<div id="button_article3" class="button" onclick="expand('article3','why i almost voted for the islamists')"></div>
 	    </li>
 	    
+	    <a id="anchor" name="trello">&nbsp</a>
 	    <li class="article_wrapper technology wael">
-		<a name="trello"></a>
 		<div class="social_links">
-		    <ul>
-		    <li class="facebook"></li>
-		    <li class="twitter"></li>
-		    <li class="linkedin"></li>
-		    <li class="stumbleupon"></li>
-		    <li class="digg"></li>
-		    </ul>
+		    <div class="facebook"></div>
+		    <div class="twitter"></div>
+		    <div class="linkedin"></div>
+		    <div class="stumbleupon"></div>
+		    <div class="digg"></div>
 		</div>
 		<div id="authors">
 		    <img src="images/wael.jpg"/><div><a href="#">Wael</a><br/>February 26th, 2012</div>
@@ -167,19 +157,17 @@
 		    Five Things wasn't the right idea, but it led us to the idea that became Trello. Pretty soon we had four programmers and two summer interns working on it. We started dogfooding the product when it was only 700 lines of code, and even in that super-simple form, we found it incredibly useful. By the end of the summer we realized we had a hit on our hands: an incredibly simple, easy-to-understand way for teams to collaborate online.</p>
 		<div class="fb-comments" data-href="http://www.ibest.ma/descaped/index.html#trello" data-num-posts="15" data-width="500"></div>
 		</div>
-		<div id="button_article4" class="button" onclick="expand('article4')"></div>
+		<div id="button_article4" class="button" onclick="expand('article4','trello')"></div>
 	    </li>
 	    
 	    <li class="article_wrapper entrepreneurship yassine">
-		<a name="justifying the price"></a>
+		<a id="anchor" name="justifying the price">&nbsp</a>
 		<div class="social_links">
-		    <ul>
-		    <li class="facebook"></li>
-		    <li class="twitter"></li>
-		    <li class="linkedin"></li>
-		    <li class="stumbleupon"></li>
-		    <li class="digg"></li>
-		    </ul>
+		    <div class="facebook"></div>
+		    <div class="twitter"></div>
+		    <div class="linkedin"></div>
+		    <div class="stumbleupon"></div>
+		    <div class="digg"></div>
 		</div>
 		<div id="authors">
 		    <img src="images/yassine.jpg"/><div><a href="#">Yassine</a><br/>February 1st, 2012</div>
@@ -199,7 +187,7 @@
 		    I don’t have much else to say about it other than I find it interesting that so many different people from so many different walks of life with so many different items for sale almost always fall into the same pattern of thinking. That itself is worth thinking about.</p>
 		<div class="fb-comments" data-href="http://www.ibest.ma/descaped/index.html#justifying the price" data-num-posts="15" data-width="500"></div>
 		</div>
-		<div id="button_article5" class="button" onclick="expand('article5')"></div>
+		<div id="button_article5" class="button" onclick="expand('article5','justifying the price')"></div>
 	    </li>
 	    <li class=""><div id="load_more">Load more articles</div></li>
 	</ul>

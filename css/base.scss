@@ -17,6 +17,9 @@ $page-height: 100%;
 $content-margin: 15px;
 @mixin social($x, $y){
     background: url(../images/gui.png) $x $y no-repeat;
+    height: 20px;
+    width: 20px;
+    float: left;
 };
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
@@ -60,6 +63,7 @@ body{
         .full_view{
             height:100%;
             margin: 0 10px 10px 10px;
+            overflow: hidden;
         }
         .summary, .full_view{
             .menu_text{
@@ -111,7 +115,7 @@ body{
         z-index: 100;
     }
     #search{
-        width: ($content-width/$categories)*2;
+        width: 160px;
         float: right;
         padding-top: 6px;
         .text{
@@ -136,6 +140,10 @@ body{
         border-top: 2px solid $color2;
         margin-top: $topics-height;
         padding: 0;
+        #anchor{
+            position: absolute;
+            margin-top: -30px;
+        }
         .article_wrapper{
             margin-bottom: $content-margin;
             border-top: 1px solid $color2;
@@ -143,45 +151,40 @@ body{
             padding: 10px;
             .social_links{
                 float: right;
-                ul{
-                    margin: 0;
-                    padding: 0;
-                    li{
-                        float:left;
-                        list-style: none;
-                        height: 20px;
-                        width: 20px;
-                    }
-                    .facebook{
-                        @include social(0,0);
-                    }
-                    .facebook:hover{
-                        @include social(0,-19px);
-                    }
-                    .twitter{
-                        @include social(-21px,0);
-                    }
-                    .twitter:hover{
-                        @include social(-21px,-19px);
-                    }
-                    .linkedin{
-                        @include social(-44px,0);
-                    }
-                    .linkedin:hover{
-                        @include social(-44px,-19px);
-                    }
-                    .stumbleupon{
-                        @include social(-66px,0);
-                    }
-                    .stumbleupon:hover{
-                        @include social(-66px,-19px);
-                    }
-                    .digg{
-                        @include social (-88px,0);
-                    }
-                    .digg:hover{
-                        @include social (-88px,-19px);
-                    }
+                margin: 0;
+                padding: 0;
+                float:right;
+                list-style: none;
+                height: 20px;
+                .facebook{
+                    @include social(0,0);
+                }
+                .facebook:hover{
+                    @include social(0,-19px);
+                }
+                .twitter{
+                    @include social(-21px,0);
+                }
+                .twitter:hover{
+                    @include social(-21px,-19px);
+                }
+                .linkedin{
+                    @include social(-44px,0);
+                }
+                .linkedin:hover{
+                    @include social(-44px,-19px);
+                }
+                .stumbleupon{
+                    @include social(-66px,0);
+                }
+                .stumbleupon:hover{
+                    @include social(-66px,-19px);
+                }
+                .digg{
+                    @include social (-88px,0);
+                }
+                .digg:hover{
+                    @include social (-88px,-19px);
                 }
             }
             .article_title{
@@ -255,6 +258,7 @@ body{
             font:{
                 size: 14px;
             }
+            overflow: hidden;
         }
         .button{
             height: 20px;
