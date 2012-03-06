@@ -3,7 +3,7 @@ function expand(div,id){
         if($('#' + div).hasClass('summary')){
                 $().click(function () {
                   $('#' + div).removeClass("summary", 1000).addClass("full_view", 1000);
-		  $(location).attr('href','index.html#'+ id );
+		  $(location).attr('href','#'+ id );
                   $('#button_' + div).addClass("collapse", 1000);
          
                 });
@@ -12,7 +12,7 @@ function expand(div,id){
                 $().click(function () {
          
                   $('#' + div).removeClass("full_view", 1000).addClass("summary", 1000);
-		  $(location).attr('href','index.html#'+ id );
+		  $(location).attr('href','#'+ id );
                   $('#button_' + div).removeClass("collapse", 1000);
          
                 });
@@ -21,7 +21,9 @@ function expand(div,id){
 };
 
 function collapse_all(){
-	$(location).attr('href','index.html');
+	$(location).attr('href','#');
+	$('div.full_view').removeClass('full_view').addClass('summary');
+	$('div.button').removeClass('collapse');
 };
 
 
