@@ -1,6 +1,6 @@
 /* The Escaped */
 
-$color0: rgb(0,111,153); /* Blue */
+$color0: rgb(33,34,28); /* Blue */
 $color1: rgb(77,77,83); /* Grey */
 $color2: rgb(200,200,200); /*Light Grey */
 $black: rgb(0,0,0);
@@ -80,7 +80,7 @@ body{
     width: $total-width;
     position: fixed;
     top: 0;
-    background-color: $color0;
+    background-color: $white;
     filter:alpha(opacity=90);
     -moz-opacity:0.9;
     -khtml-opacity: 0.9;
@@ -95,7 +95,7 @@ body{
         li{
             a:link,a:active,a:visited{
                 text-decoration:none;
-                color: $white;
+                color: $black;
                 font: {
                     size: 15px;
                 }
@@ -137,7 +137,6 @@ body{
         overflow-x: hidden;
         height: $page-height;
         list-style: none;
-        border-top: 2px solid $color2;
         margin-top: $topics-height;
         padding: 0;
         #anchor{

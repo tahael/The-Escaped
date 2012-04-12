@@ -46,7 +46,7 @@ body {
   width: 960px;
   position: fixed;
   top: 0;
-  background-color: #006f99;
+  background-color: white;
   filter: alpha(opacity=90);
   -moz-opacity: 0.9;
   -khtml-opacity: 0.9;
@@ -65,7 +65,7 @@ body {
       text-align: center; }
       #topicsmenu ul li a:link, #topicsmenu ul li a:active, #topicsmenu ul li a:visited {
         text-decoration: none;
-        color: white;
+        color: black;
         font-size: 15px; }
   #topicsmenu #logo {
     height: 38px;
@@ -93,7 +93,6 @@ body {
   overflow-x: hidden;
   height: 100%;
   list-style: none;
-  border-top: 2px solid #c8c8c8;
   margin-top: 38px;
   padding: 0; }
   #articles_container #anchor {
@@ -162,7 +161,7 @@ body {
         width: 20px;
         float: left; }
     #articles_container .article_wrapper .article_title {
-      color: #006f99;
+      color: #21221c;
       text-transform: uppercase;
       display: block;
       margin: 20px 0 0 0;
@@ -183,12 +182,12 @@ body {
         margin-right: 10px;
         float: left; }
     #articles_container .article_wrapper .ad {
-      color: #006f99;
+      color: #21221c;
       font-size: 20px;
       margin: 20px 0 0 0; }
       #articles_container .article_wrapper .ad a:link, #articles_container .article_wrapper .ad a:active, #articles_container .article_wrapper .ad a:visited {
         text-decoration: underline;
-        color: #006f99;
+        color: #21221c;
         font-size: 20px; }
   #articles_container .summary {
     width: 780px -5px;
@@ -218,7 +217,7 @@ body {
     padding: 5px;
     text-align: center;
     color: white;
-    background-color: #006f99;
+    background-color: #21221c;
     border: 1px solid #c8c8c8;
     margin-top: 10px;
     cursor: pointer; }
