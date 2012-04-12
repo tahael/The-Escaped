@@ -1,21 +1,20 @@
 //this expands and reduces articles and vertical menu sections
-function expand(div,id){    
+function expand(div,id){
         if($('#' + div).hasClass('summary')){
-                $().click(function () {
-                  $('#' + div).removeClass("summary", 1000).addClass("full_view", 1000);
-		  $(location).attr('href','#'+ id );
-                  $('#button_' + div).addClass("collapse", 1000);
-         
-                });
+			$('ul#articles_container li').each(function() {
+				if(!$(this).hasClass(div)) {
+					$(this).fadeOut('fast').addClass('hidden');
+				};
+			});
+			$('#' + div).removeClass("summary", 1000).addClass("full_view", 1000);
+			$(location).attr('href','#');
+			$('#button_' + div).addClass("collapse", 1000);
         }
-        else{
-                $().click(function () {
-         
-                  $('#' + div).removeClass("full_view", 1000).addClass("summary", 1000);
-		  $(location).attr('href','#'+ id );
-                  $('#button_' + div).removeClass("collapse", 1000);
-         
-                });
+        else {
+			$('ul#articles_container li.hidden').fadeIn('fast').removeClass('hidden');
+			$('#' + div).removeClass("full_view", 1000).addClass("summary", 1000);
+			$(location).attr('href','#'+ id );
+			$('#button_' + div).removeClass("collapse", 1000);
         };
 
 };
